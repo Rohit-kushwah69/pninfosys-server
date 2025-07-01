@@ -1,14 +1,16 @@
 const express = require('express');
 const route = express.Router();
-const Technologycontroller = require('../controller/Teachnologycontroller')
-const Portfoliocontroller = require('../controller/Portfoliocontroller')
-const Eventcontroller = require('../controller/Eventcontroller')
-const Teamcontroller = require('../controller/Teamcontroller')
-const Placecontroller = require('../controller/Placecontroller');
-const Contactcontroller = require('../controller/Contactcontroller');
 
 //adminController
 const AdminController = require('../controller/AdminController');
+const TechnologyController = require('../controller/TeachnologyController')
+const PortfolioController = require('../controller/PortfolioController')
+const EventController = require('../controller/EventController')
+const TeamController = require('../controller/TeamController')
+const PlaceController = require('../controller/PlaceController');
+const ContactController = require('../controller/ContactController');
+
+
 
 
 //Admin
@@ -18,48 +20,48 @@ route.get('/changePassword', AdminController.changePassword)
 route.put('/updateProfile', AdminController.updateProfile)
 
 //Technology
-route.post('/techinsert', Technologycontroller.techinsert)
-route.get('/techdisplay', Technologycontroller.techdisplay)
-route.get('/techview:_id', Technologycontroller.techview)
-route.get('/techdelete/:_id', Technologycontroller.techdelete)
-route.post('/techupdate/:_id', Technologycontroller.techupdate)
+route.post('/techinsert', TechnologyController.techinsert)
+route.get('/techdisplay', TechnologyController.techdisplay)
+route.get('/techview:_id', TechnologyController.techview)
+route.get('/techdelete/:_id', TechnologyController.techdelete)
+route.post('/techupdate/:_id', TechnologyController.techupdate)
 
 //portfolio
-route.post('/portfolioinsert', Portfoliocontroller.portfolioinsert)
-route.get('/portfoliodisplay', Portfoliocontroller.portfoliodisplay)
-route.get('/portfolioview:_id', Portfoliocontroller.portfolioview)
-route.get('/portfoliodelete/:_id', Portfoliocontroller.portfoliodelete)
-route.post('/portfolioupdate/:_id', Portfoliocontroller.portfoliodelete)
+route.post('/portfolioinsert', PortfolioController.portfolioinsert)
+route.get('/portfoliodisplay', PortfolioController.portfoliodisplay)
+route.get('/portfolioview:_id', PortfolioController.portfolioview)
+route.get('/portfoliodelete/:_id', PortfolioController.portfoliodelete)
+route.post('/portfolioupdate/:_id', PortfolioController.portfoliodelete)
 
 //events
-route.post('/eventinsert', Eventcontroller.eventinsert)
-route.get('/eventsdisplay', Eventcontroller.eventsdisplay)
-route.get('/eventview:_id', Eventcontroller.eventview)
-route.get('/eventdelete/:_id', Eventcontroller.eventdelete)
-route.post('/eventupdate/:_id', Eventcontroller.eventupdate)
+route.post('/eventinsert', EventController.eventinsert)
+route.get('/eventsdisplay', EventController.eventsdisplay)
+route.get('/eventview:_id', EventController.eventview)
+route.get('/eventdelete/:_id', EventController.eventdelete)
+route.post('/eventupdate/:_id', EventController.eventupdate)
 //about 
 
 //team
-route.post('/teaminsert', Teamcontroller.teaminsert)
-route.get('/teamdisplay', Teamcontroller.teamdisplay)
-route.get('/teamview/:_id', Teamcontroller.teamview)
-route.get('/teamdelete/:_id', Teamcontroller.teamdelete)
-route.post('/teamupdate/:_id', Teamcontroller.teamupdate)
+route.post('/teaminsert', TeamController.teaminsert)
+route.get('/teamdisplay', TeamController.teamdisplay)
+route.get('/teamview/:_id', TeamController.teamview)
+route.get('/teamdelete/:_id', TeamController.teamdelete)
+route.post('/teamupdate/:_id', TeamController.teamupdate)
 //placement desk
 
 //place
-route.post('/placeinsert', Placecontroller.placeinsert)
-route.get('/placedisplay', Placecontroller.placedisplay)
-route.get('/placeview:_id', Placecontroller.placeview)
-route.get('/placedelete/:_id', Placecontroller.placedelete)
-route.post('/placeupdate/:_id', Placecontroller.placeupdate)
+route.post('/placeinsert', PlaceController.placeinsert)
+route.get('/placedisplay', PlaceController.placedisplay)
+route.get('/placeview:_id', PlaceController.placeview)
+route.get('/placedelete/:_id', PlaceController.placedelete)
+route.post('/placeupdate/:_id', PlaceController.placeupdate)
 //contactpage
 
-route.post('/contactinsert', Contactcontroller.contactinsert)
-route.get('/contactdisplay', Contactcontroller.contactdisplay)
-route.get('/contactview:_id', Contactcontroller.contactview)
-route.get('/contactdelete/:_id', Contactcontroller.contactdelete)
-route.post('/contactupdate/:_id', Contactcontroller.contactupdate)
+route.post('/contactinsert', ContactController.contactinsert)
+route.get('/contactdisplay', ContactController.contactdisplay)
+route.get('/contactview:_id', ContactController.contactview)
+route.get('/contactdelete/:_id', ContactController.contactdelete)
+route.post('/contactupdate/:_id', ContactController.contactupdate)
 
 
 

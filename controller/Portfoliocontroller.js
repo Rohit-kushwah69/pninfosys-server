@@ -1,6 +1,6 @@
 const portfolioModel = require('../models/portfolio')
 
-class Portfoliocontroller {
+class PortfolioController {
     static portfolioinsert = async (req, res) => {
         try {
             console.log(req.body);
@@ -74,4 +74,4 @@ class Portfoliocontroller {
     }
     
 }
-module.exports = Portfoliocontroller
+module.exports = PortfolioController

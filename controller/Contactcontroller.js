@@ -1,6 +1,6 @@
 const contactModel = require('../models/contact')
 
-class Contactcontroller {
+class ContactController {
     static contactinsert = async (req, res) => {
         try {
             // console.log(req.body);
@@ -72,4 +72,4 @@ class Contactcontroller {
 
     }
 }
-module.exports = Contactcontroller
+module.exports = ContactController

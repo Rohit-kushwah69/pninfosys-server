@@ -1,6 +1,6 @@
 const teamModel = require('../models/team')
 
-class Teamcontroller {
+class TeamController {
     static teaminsert = async (req, res) => {
         try {
             // console.log(req.body);
@@ -72,4 +72,4 @@ class Teamcontroller {
 
     }
 }
-module.exports = Teamcontroller
+module.exports = TeamController

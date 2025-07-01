@@ -1,6 +1,6 @@
 const eventsModel = require("../models/events");
 
-class Eventcontroller {
+class EventController {
     static eventinsert = async (req, res) => {
         try {
             // console.log(req.body);
@@ -72,4 +72,4 @@ class Eventcontroller {
 
     }
 }
-module.exports = Eventcontroller
+module.exports = EventController

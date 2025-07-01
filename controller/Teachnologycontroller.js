@@ -1,6 +1,6 @@
 const technologyModel = require('../models/technology')
 
-class Technologycontroller {
+class TechnologyController {
     static techinsert = async (req, res) => {
         try {
             // console.log(req.body)
@@ -75,4 +75,4 @@ class Technologycontroller {
 
     }
 }
-module.exports = Technologycontroller
+module.exports = TechnologyController

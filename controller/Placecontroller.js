@@ -1,6 +1,6 @@
 const placeModel = require('../models/place')
 
-class Placecontroller {
+class PlaceController {
     static placeinsert = async (req, res) => {
         try {
             // console.log(req.body);
@@ -72,4 +72,4 @@ class Placecontroller {
 
     }
 }
-module.exports = Placecontroller
+module.exports = PlaceController
