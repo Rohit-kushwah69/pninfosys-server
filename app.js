@@ -1,16 +1,16 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = 4000;
 const web = require("./routes/web");
 const connectDb = require("./database/connectDB");
 // const session = require("express-session");
-const fileUpload = require("express-fileupload");
+// const fileUpload = require("express-fileupload");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "http://localhost:3000",
     credentials: true,
   })
 );

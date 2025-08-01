@@ -13,21 +13,13 @@ class AdminController {
     // Admin Registration
     static register = async (req, res) => {
         try {
-            const { name, email, password, confirmPassword } = req.body;
+            const { name, email, password } = req.body;
 
             // Check all fields
-            if (!name || !email || !password || !confirmPassword) {
+            if (!name || !email || !password) {
                 return res.status(400).json({
                     status: "failed",
                     message: "All fields are required!"
-                });
-            }
-
-            // Match password
-            if (password !== confirmPassword) {
-                return res.status(400).json({
-                    status: "failed",
-                    message: "Passwords do not match!"
                 });
             }
 

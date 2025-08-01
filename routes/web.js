@@ -8,6 +8,7 @@ const PlaceController = require('../controller/PlaceController');
 const ContactController = require('../controller/ContactController');
 const AdminController = require('../controller/AdminController');
 const checkAuth = require('../middleware/checkAuth');
+const SliderController = require('../controller/SliderController');
 
 
 //Admin
@@ -15,7 +16,7 @@ route.post('/register', AdminController.register)
 route.post('/login', AdminController.login)
 route.put('/changePassword/:id', AdminController.changePassword)
 route.post('/logout', AdminController.logOut)
-route.get('/admin/dashboard',  AdminController.dashboard)
+route.get('/admin/dashboard', AdminController.dashboard)
 route.get('/updateProfile', AdminController.updateProfile)
 route.get('/getusers', AdminController.getUsers)
 //Technology
@@ -43,8 +44,8 @@ route.get('/teamdisplay', TeamController.teamdisplay)
 route.get('/teamview/:_id', TeamController.teamview)
 route.get('/teamdelete/:_id', TeamController.teamdelete)
 route.post('/teamupdate/:_id', TeamController.teamupdate)
+
 //placement desk
-//place
 route.post('/placeinsert', PlaceController.placeinsert)
 route.get('/placedisplay', PlaceController.placedisplay)
 route.get('/placeview:_id', PlaceController.placeview)
@@ -56,6 +57,10 @@ route.get('/contactdisplay', ContactController.contactdisplay)
 route.get('/contactview:_id', ContactController.contactview)
 route.get('/contactdelete/:_id', ContactController.contactdelete)
 route.post('/contactupdate/:_id', ContactController.contactupdate)
+
+//slider controller
+route.post('/sliderInsert', SliderController.sliderInsert)
+
 
 
 
